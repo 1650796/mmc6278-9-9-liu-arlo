@@ -1,0 +1,18 @@
+{{> header}}
+<main>
+  <h1>Welcome to the Goals App!</h1>
+  <p>On this site, you can set the goals you want to accomplish. Once you've completed a goal, you can delete it via the button.</p>
+  <p>To get started, {{#if isLoggedIn}} click on the "My Goals" link in the menu {{else}} log in. {{/if}}</p>
+  <p>Currently, you are {{#unless isLoggedIn}} NOT {{/unless}} logged in.</p>
+  <p>You should {{#unless isLoggedIn}}NOT{{/unless}} be able to access <a href="/private">this page</a>.</p>
+  <p>Use the header above to {{#if isLoggedIn}} logout{{else}} login or create an account{{/if}}.</p>
+
+   {{#if isLoggedIn}}
+  <h2>Need some motivation?</h2>
+  
+  <div>{{data}}</div>
+  <p>Inspirational quotes provided by <a href="https://zenquotes.io/" target="_blank">ZenQuotes API</a></p>
+  {{/if}}
+
+</main>
+ 

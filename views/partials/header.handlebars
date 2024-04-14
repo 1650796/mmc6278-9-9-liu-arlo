@@ -1,0 +1,12 @@
+<header>
+  <a class="site-logo" href="/">
+    Goal Setting App
+  </a>
+  {{#if isLoggedIn}}
+    <a href="/goals">My Goals</a>
+    <a href="/api/logout">Logout</a>
+  {{else}}
+    <a href="/login">Login</a>
+    <a href="/signup">Sign Up</a>
+  {{/if}}
+</header>

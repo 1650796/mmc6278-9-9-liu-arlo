@@ -1,0 +1,11 @@
+  <form class="goal-form" action="/api/goals" method="POST"
+  {{#if goal}}
+      data-goal-id="{{goal._id}}"
+  {{/if}}>
+    <label for="title">Goal</label>
+    <input type="text" name="title" placeholder="What is your goal?" value="{{#if goal}}{{goal.title}}{{/if}}">
+    <label for="description">Description of Goal</label>
+    <textarea name="description" rows="2" placeholder="Briefly describe your goal." value="{{#if goal}}{{goal.description}}{{/if}}"></textarea>
+   
+    <button class="btn">Submit</button>
+  </form> 
