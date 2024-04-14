@@ -7,12 +7,32 @@
   <p>You should {{#unless isLoggedIn}}NOT{{/unless}} be able to access <a href="/private">this page</a>.</p>
   <p>Use the header above to {{#if isLoggedIn}} logout{{else}} login or create an account{{/if}}.</p>
 
-   {{#if isLoggedIn}}
+{{#if isLoggedIn}}
   <h2>Need some motivation?</h2>
-  
-  <div>{{data}}</div>
-  <p>Inspirational quotes provided by <a href="https://zenquotes.io/" target="_blank">ZenQuotes API</a></p>
+
+  <button class="btn" id="quotebtn">Get a quote!</button>
+
+  <div id="quote"></div>
   {{/if}}
 
 </main>
  
+<script>
+    const getQuote = document.getElementById('quotebtn')
+  getQuote.onclick = function(e) {
+    fetch("https://type.fit/api/quotes")
+    .then(function(response) {
+    return response.json()
+  })
+    .then(function(data) {
+      console.log(data)
+
+      const randomQuote = data[Math.floor(Math.random()*data.length)];
+      quote = randomQuote.text + " - " + randomQuote.author.replace(", type.fit", "")
+      document.getElementById("quote").innerHTML = quote
+
+  })
+  }
+  
+
+</script>
