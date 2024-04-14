@@ -27,7 +27,7 @@ async function editGoal(req, res) {
       Goal.findById(goalId).lean()
     ])
 
-    res.render('set-goal', {goal/*, isLoggedIn: req.session.isLoggedIn*/})  
+    res.render('set-goal', {goal, isLoggedIn: req.session.isLoggedIn})  
 
   } catch(err) {
     res.status(500).send(err.message)

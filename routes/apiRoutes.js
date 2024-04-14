@@ -22,10 +22,5 @@ router
   //delete goal
   .delete(checkAuth, controllers.goals.remove);
   
-router.get(
-  '/',
-  checkAuth,
-  controllers.quote.getApi
-  );
 
 module.exports = router;

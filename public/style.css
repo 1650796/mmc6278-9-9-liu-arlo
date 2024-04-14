@@ -3,7 +3,7 @@
   --dark-grey: #171c1c;
   --light-grey: #a7b9b7;
   --primary: #5cc1bb;
-  --primary-dark: #41aaa3;
+  --primary-dark: #111437;
   --secondary: hsl(15deg 100% 62%);
   --secondary-light: hsl(15deg 100% 70%);
   --text-color: #f5fffe;
@@ -13,6 +13,7 @@
 
 body {
   background-color: var(--primary-dark);
+  background-image: url("background.jpg");
   color: var(--text-color);
   font-size: var(--font-size);
   line-height: 1.5;
@@ -132,6 +133,7 @@ header .site-logo {
   flex-direction: column;
   align-items: center;
   padding: calc(var(--space) * 3) 0;
+  gap: 20px;
 }
 
 .goal-form input {
