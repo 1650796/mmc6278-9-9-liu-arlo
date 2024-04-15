@@ -33,9 +33,9 @@ connection.once("open", async function () {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       createdAt: new Date("05/02/2003 8:56 AM EST").getTime()
     }
-  ]);*/
+  ]);
 
-  await Promise.all(goals.map((goals) => goals.save()));
+  await Promise.all(goals.map((goals) => goals.save()));*/
 
   connection.close();
 });
