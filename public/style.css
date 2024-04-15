@@ -2,24 +2,38 @@
   --black: #020303;
   --dark-grey: #171c1c;
   --light-grey: #a7b9b7;
-  --primary: #5cc1bb;
-  --primary-dark: #111437;
-  --secondary: hsl(15deg 100% 62%);
-  --secondary-light: hsl(15deg 100% 70%);
+  --primary: #294cbc;
+  --primary-dark: #12174c9d;
+  --secondary: hsl(219, 72%, 34%);
+  --secondary-light: hsl(214, 100%, 73%);
+  --link:  #c6dfff;
+  --link-hover:  #e45151;
   --text-color: #f5fffe;
   --space: 16px;
   --font-size: 18px;
 }
 
+.madimi-one-regular {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.quicksand-medium> {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 body {
   background-color: var(--primary-dark);
   background-image: url("background.jpg");
+  background-size: cover;
   color: var(--text-color);
   font-size: var(--font-size);
   line-height: 1.5;
   padding: 0;
   margin: 0;
-  font-family: helvetica;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -30,7 +44,7 @@ main {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  background-color: var(--black);
+  background-color: var(--primary-dark);
   padding: var(--space) calc(var(--space) * 3);
   text-align: center;
 }
@@ -42,21 +56,30 @@ main form {
 
 h1 {
   font-size: calc(var(--font-size) * 2.25);
+  font-family: "Quicksand";
+  font-weight: 600;
 }
 h2 {
   font-size: calc(var(--font-size) * 2);
+  font-family: "Quicksand";
+  font-weight: 500;
 }
 h3 {
   font-size: calc(var(--font-size) * 1.5);
+  font-family: "Quicksand";
+  font-weight: 500;
 }
-
+p {
+  font-family: "Quicksand";
+  font-weight: 400;
+}
 a {
-  color: var(--secondary-light);
+  color: var(--link);
   transition: color 200ms;
 }
 a:hover,
 a:focus {
-  color: var(--secondary);
+  color: var(--link-hover);
 }
 
 
@@ -64,27 +87,34 @@ button.btn {
   border: var(--text-color);
   border-radius: 4px;
   background-color: var(--secondary-light);
-  padding: calc(var(--space) * 0.75) calc(var(--space) * 2);
+  padding: calc(var(--space) * 0.75) calc(var(--space) * 3);
   cursor: pointer;
   transition: background-color 200ms;
+  font-family: "Quicksand";
+  font-weight: 500;
 }
 button.btn-text {
   border: none;
-  background-color: transparent;
-  color: var(--secondary-light);
+  background-color: var(--secondary-light);
   transition: 200ms;
   cursor: pointer;
+  border-radius: 10px;
+  font-family: "Quicksand";
 }
-
 button.btn:hover,
 button.btn:focus {
   background-color: var(--secondary);
+  color: var(--text-color);
 }
 button.btn-text:hover,
 button.btn-text:focus {
-  color: var(--secondary);
+  background-color: var(--secondary);
+  color: var(--text-color);
 }
+
 header {
+  font-family: "Quicksand";
+  font-weight: 400;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -116,6 +146,8 @@ header .site-logo {
   flex-direction: column;
   align-items: center;
   padding: calc(var(--space) * 3) 0;
+  font-family: "Quicksand";
+  font-weight: 400;
 }
 
 .login-form .login-error {
@@ -132,33 +164,44 @@ header .site-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: calc(var(--space) * 3) 0;
+  /*padding: calc(var(--space) * 3) 0;*/
   gap: 20px;
+  font-family: "Quicksand";
+  font-weight: 400;
 }
 
 .goal-form input {
-  border: 3px solid black;
-  height: 40px;
+  border: 3px var(--primary);
+  height: 20px;
   margin: 0;
   width: 50%;
-  padding: 8px;
+  padding: 20px;
   border-radius: 10px;
+  font-family: "Quicksand";
 }
 
 .goal-form textarea {
-  border: 3px solid black;
+  border: 3px var(--primary);
   height: 40px;
   margin: 0;
   width: 50%;
-  padding: 8px;
+  padding: 20px;
   border-radius: 10px;
+  font-family: "Quicksand";
+}
 
+div#quote {
+  font-family: "Quicksand";
+  font-weight: 400;
+  padding: var(--space) calc(var(--space) * 3);
 }
 
 footer {
   text-align: center;
   padding: calc(var(--space) * 2) 0;
   margin-top: auto;
+  font-family: "Quicksand";
+  font-weight: 400;
 }
 
 @media screen and (max-width: 700px) {

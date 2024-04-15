@@ -1,15 +1,17 @@
 {{> header}}
 <main>
-  <h1>My Goals</h1>
-<h2>Want to set a new goal?</h2>
+<h1 class="quicksand-medium">My Goals</h1>
+<h2 class="quicksand-medium">Want to set a new goal?</h2>
 <div class="form-div">
 {{> set-goal}}
 </div>
 <h2>My Current Goals</h2>
 {{#each goals}}
+<div class = set-goals>
     <h3>{{title}}</h3>
     <p>{{description}}</p>
-  <p>
+</div>
+<p>
     Set on: {{this.createdAt}}
       <a class="edit-goal-link" href="/edit-goal/{{_id}}">Edit Goal</a>
       <button class="btn-text remove-btn" data-goal-id="{{_id}}">Delete Goal</button>
