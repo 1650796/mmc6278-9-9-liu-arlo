@@ -22,3 +22,13 @@ Welcome to the Goals App! Keep track of all the goals you want to accomplish in 
 * Navigate to [http://localhost:3000](http://localhost:3000) to view the application
 
 You can also view a live version [here](https://the-goals-app-liu-d937354880c2.herokuapp.com/)
+
+## Screenshots
+<img width="1431" alt="signup page" src="https://github.com/1650796/the-goals-app-liu/assets/75653140/4ad9350a-d54f-4008-8fa8-a3969d2c78b2">
+<img width="1431" alt="homepage" src="https://github.com/1650796/the-goals-app-liu/assets/75653140/6e3ba5ec-0246-42eb-9bb2-9d805f182edf">
+<img width="1431" alt="my goals page" src="https://github.com/1650796/the-goals-app-liu/assets/75653140/55eb2f9c-2a5e-4d29-9fe8-aa12061013b7">
+
+
+
+
+
