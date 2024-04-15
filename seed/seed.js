@@ -20,7 +20,7 @@ connection.once("open", async function () {
   // insert a sample user
   await User.create({ username: "banana", password: "meatloaf" });
 
-  const goals = await Goal.create([
+  /*const goals = await Goal.create([
     {
       title: "Get through the day",
       description:
@@ -33,7 +33,7 @@ connection.once("open", async function () {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       createdAt: new Date("05/02/2003 8:56 AM EST").getTime()
     }
-  ]);
+  ]);*/
 
   await Promise.all(goals.map((goals) => goals.save()));
 
